@@ -1,13 +1,10 @@
-<mat-list>
+<mat-toolbar class="mat-toolbar">
+    <mat-toolbar-row>
+        McDonald's Nutrition
+    </mat-toolbar-row>
+</mat-toolbar>
 
-    <div mat-subheader>Liste des Burgers</div>
+<li routerLinkActive="active"><button mat-button color="primary" routerLink="auth">Auth</button></li>
+<li routerLinkActive="active"><button mat-button color="primary" routerLink="burgers">Primary</button></li>
 
-    <app-burger  *ngFor="let burger of burgers; let i = index"
-                       [id]="burger.id"
-                       [name]="burger.name"
-                       [price]="burger.price"
-                       [image]="burger.image"
-                       [index]="i">
-    </app-burger>
-
-</mat-list>
+<router-outlet></router-outlet>

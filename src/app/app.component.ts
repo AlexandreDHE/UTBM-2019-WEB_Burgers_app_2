@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BurgersService } from './services/api/burgers.service';
-import { Observable } from 'rxjs';
 export { Subscribable, SubscribableOrPromise, ObservableInput, Subscription } from 'rxjs';
 
 @Component({
@@ -12,19 +11,7 @@ export { Subscribable, SubscribableOrPromise, ObservableInput, Subscription } fr
 export class AppComponent {
 
   title = 'Burgers';
-  burgers: any[];
 
-  constructor(private buergerService: BurgersService){}
+  constructor(){}
 
-  ngOnInit() {
-    let burgers = this.buergerService.listBurgers().subscribe( (value) => {
-      this.burgers = value;
-    },
-    (error) => {
-      console.log('Uh-oh, an error occurred! : ' + error);
-    },
-    () => {
-      console.log('Observable complete!');
-    });
-  }
 }

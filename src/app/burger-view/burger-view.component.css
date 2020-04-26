@@ -1,0 +1,20 @@
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+  }
+
+.app-burger{
+margin: 2%;
+opacity: 0.85;
+}
+
+.app-burger:hover{
+    opacity:1;
+}
+
+.burger-card {
+    max-width: 400px;
+}
+

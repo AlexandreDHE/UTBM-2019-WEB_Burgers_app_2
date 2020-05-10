@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BurgerService } from '../services/burger.service';
 
 @Component({
   selector: 'app-burger-details',
@@ -8,15 +7,16 @@ import { BurgerService } from '../services/burger.service';
 })
 export class BurgerDetailsComponent implements OnInit {
 
-  @Input() id:number;
-  @Input() name:string;
-  @Input() price:number;
-  @Input() image:string;
-  @Input() nutriscore:string;
-  @Input() nutriments:object;
+  @Input() id: number;
+  @Input() name: string;
+  @Input() price: number;
+  @Input() image: string;
+  @Input() nutriscore: string;
+  @Input() nutriments: object;
+  @Input() index: number;
 
-  constructor(private burgerService: BurgerService) { }
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
 }

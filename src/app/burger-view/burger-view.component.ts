@@ -10,26 +10,24 @@ export { Subscribable, SubscribableOrPromise, ObservableInput, Subscription } fr
 })
 export class BurgerViewComponent implements OnInit {
 
-  isAuth:boolean = false;
-  
   burgers: any[];
 
-  @Input() id:number;
+  @Input() id: number;
 
-  constructor(private burgerService: BurgersService, private authService: AuthService){}
+  constructor(private burgerService: BurgersService, private authService: AuthService) { }
 
   authStatus: boolean = this.authService.isAuth;
 
   ngOnInit() {
-    let burgers = this.burgerService.listBurgers().subscribe( (value) => {
+    let burgers = this.burgerService.listBurgers().subscribe((value) => {
       this.burgers = value;
     },
-    (error) => {
-      console.log('Uh-oh, an error occurred! : ' + error);
-    },
-    () => {
-      console.log('Observable complete!');
-    });
+      (error) => {
+        console.log('Uh-oh, an error occurred! : ' + error);
+      },
+      () => {
+        console.log('Observable complete!');
+      });
   }
 
 }

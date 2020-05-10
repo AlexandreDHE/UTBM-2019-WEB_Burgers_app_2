@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BurgerService } from './services/burger.service';
+import { BurgersService } from '././services/api/burgers.service';
 import { AuthService } from './services/auth.service';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -62,7 +62,7 @@ const appRoutes: Routes = [
     MatIconModule,
     MatMenuModule,
   ],
-  providers: [BurgerService, AuthService],
+  providers: [BurgersService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,12 @@
 <app-index></app-index>
 
-<app-burger-details [nutriscore]="burger_details['nutriscore']"></app-burger-details>
+<mat-list *ngIf="authStatus">
+
+    <div mat-subheader>Détails du burger {{burger_details['name']}}</div>
+
+    <div class="main-div">
+        <app-burger-details [name]="burger_details['name']" [price]="burger_details['price']"
+            [image]="burger_details['image']" [nutriscore]="burger_details['nutriscore']"
+            [nutriments]="burger_details['nutriments']"></app-burger-details>
+    </div>
+</mat-list>

@@ -1,14 +1,13 @@
+<app-index></app-index>
+
+
 <mat-list *ngIf="authStatus">
 
     <div mat-subheader>Liste des Burgers</div>
 
     <div class="main-div">
-        <app-burger class="app-burger"  *ngFor="let burger of burgers; let i = index"
-                        [id]="burger.id"
-                        [name]="burger.name"
-                        [price]="burger.price"
-                        [image]="burger.image"
-                        [index]="i">
+        <app-burger class="app-burger" *ngFor="let burger of burgers; let i = index" [id]="burger.id"
+            [name]="burger.name" [price]="burger.price" [image]="burger.image" [index]="i">
         </app-burger>
     </div>
 

@@ -1,23 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.css']
 })
-export class AuthComponent implements OnInit {
+export class IndexComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router:Router) { }
+  title = 'Burgers';
+  authStatus: boolean;
 
-  authStatus:boolean;
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    this.authStatus=this.authService.isAuth;
+    this.authStatus = this.authService.isAuth;
   }
 
-  onSignIn(){
+  onSignIn() {
     this.authService.signIn().then(
       () => {
         console.log("Sing in successful !");
@@ -27,9 +28,11 @@ export class AuthComponent implements OnInit {
     );
   }
 
-  onSignOut(){
+  onSignOut() {
     this.authService.signOut();
     console.log("Sing out successful !");
     this.authStatus = this.authService.isAuth;
+    this.router.navigate(['']);
   }
+
 }

@@ -8,31 +8,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BurgerComponent } from './burger/burger.component';
 
-import {MatListModule} from '@angular/material/list';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { ApiModule } from './services';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { AuthComponent } from './auth/auth.component';
 import { BurgerViewComponent } from './burger-view/burger-view.component';
 
 import { Routes, RouterModule } from '@angular/router';
 import { BurgerDetailsViewComponent } from './burger-details-view/burger-details-view.component';
 import { BurgerDetailsComponent } from './burger-details/burger-details.component';
+import { IndexComponent } from './index/index.component';
 
 const appRoutes: Routes = [
   { path: 'burgers', component: BurgerViewComponent },
-  { path: 'burgers/:id', component: BurgerDetailsViewComponent},
-  { path: 'auth', component: AuthComponent },
-  { path: '', component: BurgerComponent }
+  { path: 'burgers/:id', component: BurgerDetailsViewComponent },
+  { path: '', component: IndexComponent }
 ];
 
 
@@ -40,10 +39,10 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BurgerComponent,
-    AuthComponent,
     BurgerViewComponent,
     BurgerDetailsComponent,
     BurgerDetailsViewComponent,
+    IndexComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

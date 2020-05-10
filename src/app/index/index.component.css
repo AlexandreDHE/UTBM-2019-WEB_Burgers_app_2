@@ -1,0 +1,43 @@
+.mat-toolbar{
+    background-color: #014711;
+    color: white;
+}
+
+.login{
+    float: right;
+    color: #fdc513;
+
+}
+
+.logout{
+    float: right;
+    color: #fdc513;
+}
+
+.container{
+    color: white;
+    position: fixed;
+    background-image:url('./../../assets/burgers.jpg') ;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+}
+
+.bienvenue{
+    margin-top: 12%;
+    margin-left: 10%;
+    font-size: 70px;
+    margin-bottom: 3%;
+}
+
+.love{
+    font-style: italic;
+    margin-left: 10%;
+    font-size: 50px;
+    color: #fdc513;
+}
+
+.healthy{
+    font-weight: bold;
+}

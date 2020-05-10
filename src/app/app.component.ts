@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BurgersService } from './services/api/burgers.service';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
 export { Subscribable, SubscribableOrPromise, ObservableInput, Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +13,5 @@ export { Subscribable, SubscribableOrPromise, ObservableInput, Subscription } fr
 export class AppComponent {
 
   title = 'Burgers';
-
-  constructor(){}
 
 }

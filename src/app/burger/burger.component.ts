@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BurgerService } from '../services/burger.service';
 
 @Component({
   selector: 'app-burger',
@@ -13,8 +12,6 @@ export class BurgerComponent implements OnInit {
   @Input() price:number;
   @Input() image: string;
   @Input() index:number;
-
-  constructor(private burgerService: BurgerService) { }
 
   ngOnInit(): void {}
 

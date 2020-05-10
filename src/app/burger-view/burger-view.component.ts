@@ -11,6 +11,7 @@ export { Subscribable, SubscribableOrPromise, ObservableInput, Subscription } fr
 export class BurgerViewComponent implements OnInit {
 
   isAuth:boolean = false;
+  
   burgers: any[];
 
   @Input() id:number;

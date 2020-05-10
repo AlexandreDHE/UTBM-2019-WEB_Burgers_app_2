@@ -17,8 +17,6 @@ export class BurgerDetailsComponent implements OnInit {
 
   constructor(private burgerService: BurgerService) { }
 
-  ngOnInit(): void {
-    console.log("Burger: ",this.id);
-  }
+  ngOnInit(): void {}
 
 }

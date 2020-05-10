@@ -1,0 +1,10 @@
+<mat-toolbar class="mat-toolbar">
+    McDonald's Nutrition
+    <button class="login" mat-button *ngIf="!authStatus" (click)="onSignIn()">Login</button>
+    <button class="logout" mat-button *ngIf="authStatus" (click)="onSignOut()">Logout</button>
+</mat-toolbar>
+
+<body *ngIf="!authStatus" class="container">
+    <p class="bienvenue">Bienvenue</p>
+    <p class="love">I'm lovin it <span class="healthy">healthy</span></p>
+</body>
